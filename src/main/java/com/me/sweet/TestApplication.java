@@ -18,6 +18,6 @@ public class TestApplication  extends SpringBootServletInitializer implements Em
 
 	@Override
 	public void customize(ConfigurableEmbeddedServletContainer container) {
-		container.setPort(8081);
+		container.setPort(8088);
 	}
 }
