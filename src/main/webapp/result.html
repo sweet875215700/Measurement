@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+</head>
+
+<div class="swiper-slide" >
+    <dt>如果多血质一栏得分超过20，其他三栏得分相对的较低，则为典型多血质。如这一栏在20分以下，10分以上，其他三栏得分较低，则为一般多血质。如果有两栏的得分显著超过另两栏得分，而且分数比较接近，则为混合型气质。 </dt>
+    <dt>如胆汁—多血质混合型 多血—粘液质混合型 黏液—抑郁质混合型等等
+        如果一栏的得分很低，其他三栏都不高，但很接近，则为三种混质的混合性，如多血
+        －胆汁—粘液质混合型或粘液—多血—抑郁质混合型。 </dt>
+    <dt>例如：麦兜个人情况：胆汁加数：16，多血质加数：26，粘液质加数：2，抑制质加数：-3
+    综上所述：麦兜为典型多血质～</dt>
+
+</div>
+<dt></dt>
+<dt></dt>
+    <div class="swiper-slide" >
+        <dt>您的测评结果：</dt>
+        <dt>胆汁质：<label id="a"></label></dt>
+        <dt>多血质：<label id="b"></label></dt>
+        <dt>粘液质：<label id="c"></label></dt>
+        <dt>抑郁质：<label id="d"></label></dt>
+    </div>
+
+<body>
+
+</body>
+
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script>
+
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+
+    var a = getQueryString("scoreA");
+    var b = getQueryString("scoreB");
+    var c = getQueryString("scoreC");
+    var d = getQueryString("scoreD");
+
+    $("#a").html(a);
+    $("#b").html(b);
+    $("#c").html(c);
+    $("#d").html(d);
+
+</script>
+</html>

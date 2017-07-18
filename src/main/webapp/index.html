@@ -532,8 +532,17 @@
                 dataType :  'json',
                 data  : json,
                 contentType: 'application/json',
-                success  : function(result){console.debug(result);}
+                success  : function(result){
+                    if(result.code != 0){
+                        alert(result.tips);
+                    }else {
 
+                        location.href="/result.html?scoreA="+result.data.socoreA
+                                                    +"&scoreB="+result.data.socoreB
+                                                     +"&scoreC="+result.data.socoreC
+                                                     +"&scoreD="+result.data.socoreD;
+                    }
+                }
 
             }
         );
